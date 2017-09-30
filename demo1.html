@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>  
+<html>  
+<head>  
+<meta charset=" utf-8">  
+<style>  
+#bs{  
+      position:absolute;  
+      top:100px;  
+      background: #fff;  
+      width: 30px;  
+      height: 30px;  
+      border-radius: 50%;  
+      animation:moves  2s linear  infinite ; //2s内完成，速度是匀速，一直循环播放  
+}  
+  
+  
+@keyframes moves{  
+  0%{  
+   box-shadow: 30px 0px 0px 0px #000 ,   
+                         90px 0px 0px 0px #888 ,  
+                        150px 0px 0px 0px #444 ;  
+ }  
+  25%{  
+   box-shadow: 30px 20px 0px 0px #000 ,   
+                         90px -40px 0px 0px #888 ,  
+                         150px 30px 0px 0px #444 ;  
+ }  
+  50%{  
+   box-shadow: 30px 0px 0px 0px #000 ,   
+                         90px 0px 0px 0px #888 ,  
+                         150px 0px 0px 0px #444 ;  
+ }  
+  75%{  
+   box-shadow: 30px -20px 0px 0px #000 ,  
+                         90px 40px 0px 0px #888 ,  
+                         150px -30px 0px 0px #444 ;  
+ }  
+  100%{  
+   box-shadow: 30px 0px 0px 0px #000 ,  
+                         90px 0px 0px 0px #888 ,  
+                         150px 0px 0px 0px #444 ;  
+ }  
+}  
+</style>  
+</head>  
+<body>  
+<div id='bs'></div>  
+</body>  
+</html> 

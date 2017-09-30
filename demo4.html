@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>  
+<html>  
+<head>  
+<meta charset=" utf-8">  
+<style>  
+body{
+    background:#e4e4e4;
+}
+#circular{  
+         position:absolute;
+         top:0;
+         left:0;
+         right:0;
+         bottom:0;
+         width:80px;  
+         height:80px;  
+         margin:auto;
+         overflow:hidden;
+         background-color:#000;  
+         border-radius:50%;      
+         background: linear-gradient(#046fff,#3b5cc1);         
+        }  
+
+#start,#stop{
+    width:80px;  
+    height:80px;  
+    border-radius:50%; 
+    text-align:center;
+    line-height:80px;
+    font-size:20px;
+    font-weight:bold;
+    user-select:none;
+    color:#fff;
+}
+
+#stop{
+    display:none;
+}
+
+#circular:hover{
+    cursor:pointer;
+}
+
+.myAnimation{
+    animation:moves  1s  ease-in infinite;
+}
+@keyframes moves{  
+ 0%{  
+      box-shadow: 0px 0px 0px 0px #e4e4e4, 
+                  0px 0px 0px 0px #d4d4d4,                   
+                  0px 0px 0px 0px #e4e4e4, 
+                  0px 0px 0px 0px #d4d4d4,
+                  0px 0px 0px 0px #e4e4e4;  
+ }  
+ 25%{  
+      box-shadow: 0px 0px 0px 5px #e4e4e4, 
+                  0px 0px 0px 10px #d4d4d4,  
+                  0px 0px 0px 15px #e4e4e4, 
+                  0px 0px 0px 20px #d4d4d4,
+                  0px 0px 0px 25px #e4e4e4;  
+ }  
+ 50%{  
+      box-shadow: 0px 0px 0px 10px #e4e4e4, 
+                  0px 0px 0px 15px #d4d4d4,  
+                  0px 0px 0px 20px #e4e4e4, 
+                  0px 0px 0px 25px #d4d4d4,
+                  0px 0px 0px 30px #e4e4e4;  
+ }  
+ 75%{  
+      box-shadow: 0px 0px 0px 15px #e4e4e4, 
+                  0px 0px 0px 20px #d4d4d4,
+                  0px 0px 0px 25px #e4e4e4,
+                  0px 0px 0px 30px #d4d4d4,                  
+                  0px 0px 0px 35px #e4e4e4;  
+ }  
+ 100%{  
+      box-shadow: 0px 0px 0px 20px #e4e4e4, 
+                  0px 0px 0px 25px #d4d4d4, 
+                  0px 0px 0px 30px #e4e4e4,   
+                  0px 0px 0px 35px #d4d4d4,                  
+                  0px 0px 0px 40px #e4e4e4;  
+ }  
+}  
+</style>  
+</head>  
+<body>  
+<div id='circular'>
+    <div id="start">扫描</div>
+    <div id="stop">结束</div>
+</div>  
+<script>
+    var dom=document.querySelector("#circular");
+    var time=null;
+    dom.onclick=function(e){
+        var id=e.target.id;
+        if("start"===id)
+        {
+            this.classList.add("myAnimation");
+            document.querySelector("#start").style.display="none";
+            document.querySelector("#stop").style.display="block";
+        }
+        else if("stop"===id)
+        {
+            this.classList.remove("myAnimation");
+            document.querySelector("#stop").style.display="none";
+            document.querySelector("#start").style.display="block";
+        }
+    }
+ 
+</script>
+</body>  
+</html>  

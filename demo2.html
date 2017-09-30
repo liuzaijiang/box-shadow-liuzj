@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>  
+<html>  
+<head>  
+<meta charset=" utf-8">  
+<style>  
+#circular{  
+         width:50px;  
+         height:50px;  
+         background-color:#fff;  
+         border-radius:50%;  
+         animation:moves  2s  linear infinite;  
+        }  
+  
+@keyframes moves{  
+ 0%{  
+      box-shadow:90px 40px 0px 0px  #000000,   
+                           90px 30px 0px 10px #d4d4d4,  
+                           90px 20px 0px 20px #555555;  
+ }  
+ 25%{  
+      box-shadow:90px 40px 0px 15px  #111111,   
+                           90px 35px 0px 20px #d4d4d4,  
+                           90px 25px 0px 30px #666666;  
+ }  
+ 50%{  
+      box-shadow:90px 40px 0px 20px  #222222,   
+                           90px 40px 0px 30px #d4d4d4,  
+                           90px 40px 0px 40px #777777;  
+ }  
+ 75%{  
+      box-shadow:90px 40px 0px 10px  #333333,   
+                           90px 50px 0px 20px #d4d4d4,  
+                           90px 60px 0px 30px #e4e4e4;  
+ }  
+ 100%{  
+      box-shadow:90px 40px 0px 0px  #000000,   
+                           90px 30px 0px 10px #888888,  
+                           90px 20px 0px 20px #e4e4e4;  
+ }  
+}  
+</style>  
+</head>  
+<body>  
+<div id='circular'></div>  
+</body>  
+</html> 

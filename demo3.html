@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>    
+<html>    
+<head>    
+<meta charset=" utf-8">    
+<style>    
+#bs{    
+      position:absolute;    
+      top:100px;    
+      background: #fff;    
+      width: 20px;    
+      height: 20px;    
+      border-radius: 50%;    
+      animation:moves  2s linear  infinite ;  
+}    
+    
+@keyframes moves{    
+  0%{    
+   box-shadow: 20px 0px 0px 0px #ff5722 ,     
+               50px 0px 0px 3px #4caf50 ,    
+               80px 0px 0px 0px #2196f3 ;    
+ }    
+  25%{    
+   box-shadow: 50px 0px  0px 3px #ff5722 ,     
+               20px 0px 0px 0px #4caf50 ,    
+               50px 0px 0px 3px #2196f3 ;    
+ }    
+  50%{    
+   box-shadow: 80px 0px 0px 0px #ff5722 ,     
+               50px 0px 0px 3px #4caf50 ,    
+               20px 0px 0px 0px #2196f3 ;    
+ }    
+  75%{    
+   box-shadow: 50px 0px 0px 3px #ff5722 ,    
+               80px 0px 0px 0px #4caf50 ,    
+               50px 0px 0px 3px #2196f3 ;    
+ }    
+  100%{    
+   box-shadow: 20px 0px 0px 0px #ff5722 ,    
+               50px 0px 0px 3px #4caf50 ,    
+               80px 0px 0px 0px #2196f3 ;    
+ }    
+}  
+</style>    
+</head>    
+<body>    
+<div id='bs'></div>    
+</body>    
+</html>    
